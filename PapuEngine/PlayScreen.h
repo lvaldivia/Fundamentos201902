@@ -6,17 +6,17 @@
 #include "SpriteBacth.h"
 #include "GLTexture.h"
 #include "SpriteFont.h"
-
+#include "Background.h"
 
 class PlayScreen: public IGameScreen
 {
 private:
+	Camera2D camera;
+	Background* background;
 	GLS_Program _program;
-	Camera2D _camera2D;
 	Window* _window = nullptr;
 	SpriteBacth _spriteBatch;
 	SpriteBacth _hudBach;
-	Camera2D _hudCamera;
 	SpriteFont* _spriteFont;
 	void drawHUD();
 public:
