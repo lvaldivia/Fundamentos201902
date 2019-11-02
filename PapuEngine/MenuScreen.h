@@ -6,6 +6,7 @@
 #include "Background.h"
 #include "Camera2D.h"
 #include "SpriteFont.h"
+#include "Button.h"
 
 using namespace std;
 
@@ -13,12 +14,14 @@ class MenuScreen : public IGameScreen
 {
 private:
 	Camera2D camera;
+	Button* button;
 	Background* background = nullptr;
 	Window* _window = nullptr;
 	bool btnGameClicked;
 	GLS_Program _program;
 	SpriteBacth _spriteBatch;
 	SpriteFont* spriteFont;
+	bool isClicked;
 public:
 	MenuScreen(Window* window);
 	virtual void build() override;

@@ -1,6 +1,7 @@
 #include "MenuScreen.h"
 #include "MyScreens.h"
 #include "Game.h"
+#include <iostream>
 
 
 MenuScreen::MenuScreen(Window* window):
@@ -22,6 +23,9 @@ void MenuScreen::initSystem() {
 }
 
 void MenuScreen::destroy() {
+	delete button;
+	delete background;
+	delete spriteFont;
 }
 
 void MenuScreen::onExit() {}
@@ -35,10 +39,11 @@ void MenuScreen::onEntry() {
 			_window->getScreenWidth() / 2.0f,
 			_window->getScreenHeight() / 2.0f)
 	);
-
+	//isClicked = false;
 	_spriteBatch.init();
 	background = new Background("Textures/game.png");
 	spriteFont = new SpriteFont("Fonts/signature.ttf",64);
+	button = new Button("Textures/menu_button.png");
 }
 
 void MenuScreen::update(){
@@ -50,6 +55,14 @@ void MenuScreen::checkInput() {
 	SDL_Event event;
 	while (SDL_PollEvent(&event)) {
 		_game->onSDLEvent(event);
+	}
+	if (_game->_inputManager.isKeyDown(SDL_BUTTON_LEFT)) {
+		if (!isClicked && button->clicked(
+			_game->_inputManager.getMouseCoords())) {
+			//cambio de pantalla
+			isClicked = true;
+			_currentState = ScreenState::CHANGE_NEXT;
+		}
 	}
 }
 
@@ -66,6 +79,7 @@ void MenuScreen::draw() {
 	glUniform1i(imageLocation, 0);
 	_spriteBatch.begin();
 	background->draw(_spriteBatch);
+	button->draw(_spriteBatch);
 	_spriteBatch.end();
 	_spriteBatch.renderBatch();
 	char buffer[256];

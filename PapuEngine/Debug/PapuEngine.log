@@ -1,3 +1,37 @@
-﻿  MenuScreen.cpp
+﻿  Window.cpp
+  Timing.cpp
+c:\users\proyecto\downloads\juego1\papuengine\timing.cpp(22): warning C4244: 'argumento': conversión de 'float' a 'Uint32'; posible pérdida de datos
+  TextureCache.cpp
+  SpriteFont.cpp
+  SpriteBacth.cpp
+c:\users\proyecto\downloads\juego1\papuengine\spritebacth.cpp(45): warning C4018: '<': no coinciden signed/unsigned
+c:\users\proyecto\downloads\juego1\papuengine\spritebacth.cpp(73): warning C4018: '<': no coinciden signed/unsigned
+  Sprite.cpp
+  ScreenList.cpp
+  ResourceManager.cpp
+  PlayScreen.cpp
+  PapuEngine.cpp
+  MenuScreen.cpp
+  main.cpp
+  IOManager.cpp
+c:\users\proyecto\downloads\juego1\papuengine\iomanager.cpp(15): warning C4244: 'inicializando': conversión de 'std::streamoff' a 'int'; posible pérdida de datos
+c:\users\proyecto\downloads\juego1\papuengine\iomanager.cpp(18): warning C4244: '-=': conversión de 'std::streamoff' a 'int'; posible pérdida de datos
+  InputManager.cpp
+  ImageLoader.cpp
+c:\users\proyecto\downloads\juego1\papuengine\imageloader.cpp(36): warning C4244: '=': conversión de 'unsigned long' a 'float'; posible pérdida de datos
+c:\users\proyecto\downloads\juego1\papuengine\imageloader.cpp(37): warning C4244: '=': conversión de 'unsigned long' a 'float'; posible pérdida de datos
+  GLS_Program.cpp
+  Game.cpp
+  EndScreen.cpp
+  Camera2D.cpp
+  Button.cpp
+  Generando código...
+c:\users\proyecto\downloads\juego1\papuengine\camera2d.cpp(38): warning C4715: 'Camera2D::isBoxInView': no todas las rutas de acceso de control devuelven un valor
+  Compilando...
+  Background.cpp
+  App.cpp
+  Agent.cpp
+  Generando código...
+  LINK : no se encontró C:\Users\Proyecto\Downloads\Juego1\Debug\PapuEngine.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
   PapuEngine.vcxproj -> C:\Users\Proyecto\Downloads\Juego1\Debug\PapuEngine.exe
   PapuEngine.vcxproj -> C:\Users\Proyecto\Downloads\Juego1\Debug\PapuEngine.pdb (Partial PDB)
